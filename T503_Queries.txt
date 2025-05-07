@@ -1,0 +1,58 @@
+1. How many patients are there in the database?
+SELECT COUNT(*) AS "TotalPatients" FROM "Patient";
+
+2. What are the different blood groups represented in the database, and how many patients belong to each blood group?
+SELECT "BloodGroup", COUNT(*) AS "TotalPatients" FROM "Patient" GROUP BY "BloodGroup";
+
+3. What are the medical conditions and allergies of patient with PID 1003?
+SELECT "MedConditions", "Allergies" FROM "MedicalHistory" WHERE "PID" = 1003;
+
+4. Who is the doctor on duty on 2024-02-01 at 11:00 AM?
+SELECT S."Name" AS "DoctorName"
+FROM "Staff" AS S
+INNER JOIN "Appointment" AS A ON S."StaffID" = A."StaffID"
+WHERE A."Time" = '11:00:00' AND A."Date" = '2024-02-01' AND S."Type" = 'Clinic Staff' AND S."StaffID" IN (SELECT "StaffID" FROM "ClinicStaff" WHERE "Role" LIKE '%Doctor%');
+
+5. What is the diagnosis of the report with RepID 10008? 
+SELECT "Diagnosis" FROM "Report" WHERE "RepID" = 10008;
+
+6. How many staff members are working as pharmacy staff? 
+SELECT COUNT(*) AS "TotalPharmacyStaff" FROM "PharmacyStaff";
+
+7. What is the average salary of cleaning staff?
+SELECT AVG("Salary") AS "AverageSalary" FROM "Staff" WHERE "StaffID" IN (SELECT "StaffID" FROM "CleaningStaff");
+
+8. Which patient has the highest consultancy charges, and what is the amount?
+SELECT P."Name" AS "PatientName", R."ConsultancyCharges"
+FROM "Patient" AS P
+INNER JOIN "Report" AS R ON P."PID" = R."PID"
+ORDER BY R."ConsultancyCharges" DESC
+LIMIT 1;
+
+9. How many appointments were scheduled for each date?
+SELECT "Date", COUNT(*) AS "TotalAppointments"
+FROM "Appointment"
+GROUP BY "Date";
+
+10. Which patient has the most number of medical conditions?
+SELECT P."Name" AS "PatientName", COUNT(*) AS "TotalMedicalConditions"
+FROM "Patient" AS P
+INNER JOIN "MedicalHistory" AS M ON P."PID" = M."PID"
+GROUP BY P."PID"
+ORDER BY "TotalMedicalConditions" DESC
+LIMIT 1;
+
+
+11.Profits by Selling the Prescriptions to Patients For the Entire Week:
+SELECT SUM(pres_profit) AS total_pres_profit
+FROM (
+    SELECT  
+	(("Inventory"."SellPrice" - "Inventory"."CostPrice") * (("Prescription"."MorningDosage" + "Prescription"."AfternoonDosage" + "Prescription"."EveningDosage") * "Prescription"."Quantity")) AS pres_profit
+    FROM "Prescription"
+    JOIN "Report" ON "Prescription"."RepID" = "Report"."RepID"
+    JOIN "Inventory" ON "Prescription"."MedName" = "Inventory"."MedName"
+) AS PrescriptionProfit;
+
+12.Doctors Profit for a Given Period(Consultancy Charger - Salaries of Employess/4):
+SELECT 
+	(SELECT SUM("ConsultancyCharges") FROM "Report") - (SELECT SUM("Salary") FROM "Staff") / 4 AS doctor_profit;

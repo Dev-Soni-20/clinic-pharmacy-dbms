@@ -1,0 +1,424 @@
+--Data Insertion Script For Clinic and Pharmacy Management System
+
+--For patient table:
+INSERT INTO "Patient" ("PID", "PhoneNumber", "Address", "Name", "BloodGroup", "Age", "Email")
+VALUES
+(1000, '9898233947', '14, Sarthak Bungalows, New CG Road, Chandkheda, Ahmedabad', 'Rajesh Shah', 'A+', 35, 'rajesh@gmail.com'),
+(1001, '8765432109', '27, Rajvi Park, Bopal Cross Road, Bopal, Ahmedabad', 'Priya Jain', 'B+', 28, 'priya@hotmail.com'),
+(1002, '8562039489', '56, Swagat City, Nikol Road, Nikol, Ahmedabad', 'Rahul Soni', 'O-', 45, 'rahul@yahoo.com'),
+(1003, '6749281093', '78, Radhe Residency, Nava Naroda Road, Nava Naroda, Ahmedabad', 'Anita Mehta', 'AB-', 50, 'anita@gmail.com'),
+(1004, '9698230471', '90, Maruti Enclave, Sarkhej Road, Sarkhej, Ahmedabad', 'Amit Patel', 'B-', 22, 'amit@hotmail.com'),
+(1005, '8321987654', '123, Shree Krishna Avenue, Ambawadi, Ahmedabad', 'Sneha Desai', 'O+', 30, 'sneha@yahoo.com'),
+(1006, '6210876543', '45, Raghukul Towers, Vastrapur, Ahmedabad', 'Neha Sharma', 'A-', 40, 'neha@gmail.com'),
+(1007, '8197358640', '78, Samarth Residency, Naranpura, Ahmedabad', 'Vikram Shah', 'B+', 55, 'vikram@hotmail.com'),
+(1008, '9896543211', '109, Aryan Flats, Vasna Road, Vasna, Ahmedabad', 'Pooja Jain', 'AB+', 27, 'pooja@yahoo.com'),
+(1009, '8765432101', '231, Sarvodaya Residency, Science City Road, Sola, Ahmedabad', 'Kunal Soni', 'O-', 32, 'kunal@gmail.com'),
+(1010, '9654321092', '44, Devkrupa Bungalows, Ranip, Ahmedabad', 'Aarti Patel', 'B-', 48, 'aarti@hotmail.com'),
+(1011, '6543210983', '67, Shakti Residency, Chandlodia Road, Chandlodia, Ahmedabad', 'Deepak Shah', 'A+', 25, 'deepak@yahoo.com'),
+(1012, '9432109874', '80, Gurukul Bungalows, Gurukul, Ahmedabad', 'Swati Jain', 'AB-', 38, 'swati@gmail.com'),
+(1013, '9210987653', '91, Indraprastha Park, Satellite Road, Satellite, Ahmedabad', 'Ramesh Soni', 'O+', 42, 'ramesh@hotmail.com'),
+(1014, '9210987656', '143, Royal Enclave, Narol-Naroda Road, Narol, Ahmedabad', 'Rina Shah', 'A-', 33, 'rina@yahoo.com'),
+(1015, '8809876547', '202, Anmol Residency, Ghatlodia, Ahmedabad', 'Alok Desai', 'B+', 29, 'alok@gmail.com'),
+(1016, '9896543219', '76, Mahavir Flats, Usmanpura, Ahmedabad', 'Mukesh Soni', 'O-', 41, 'mukesh@yahoo.com'),
+(1017, '8765432100', '33, Satyam Bungalows, Thaltej Road, Thaltej, Ahmedabad', 'Hema Shah', 'A+', 31, 'hema@gmail.com'),
+(1018, '6954321091', '89, Shreeji Vihar, Vatva Road, Vatva, Ahmedabad', 'Sanjay Patel', 'B-', 47, 'sanjay@hotmail.com'),
+(1019, '9543210982', '120, Sharnam Residency, Jodhpur Cross Road, Satellite, Ahmedabad', 'Asha Desai', 'AB-', 26, 'asha@yahoo.com'),
+(1020, '8432109873', '180, Aditya Avenue, Naranpura, Ahmedabad', 'Rajiv Jain', 'O+', 36, 'rajiv@gmail.com'),
+(1021, '8321098764', '67, Ratnam Flats, Nehrunagar, Ahmedabad', 'Seema Soni', 'A-', 44, 'seema@hotmail.com'),
+(1022, '9210987655', '98, Shreeji Park, Anandnagar Road, Prahladnagar, Ahmedabad', 'Amar Shah', 'B+', 39, 'amar@yahoo.com'),
+(1023, '6109876546', '209, Shivalik Enclave, S.G. Highway, Bodakdev, Ahmedabad', 'Geeta Jain', 'AB+', 34, 'geeta@gmail.com'),
+(1024, '9898765432', '76, Shivam Society, Maninagar, Ahmedabad', 'Rita Patel', 'O-', 43, 'rita@hotmail.com'),
+(1025, '8123456789', '12, Green Park Society, Satellite Road, Satellite, Ahmedabad', 'Sagar Shah', 'A+', 30, 'sagar@gmail.com'),
+(1026, '7865432108', '33, Sunrise Residency, Gota Road, Gota, Ahmedabad', 'Reema Desai', 'B-', 45, 'reema@hotmail.com'),
+(1027, '7456203894', '24, Shivam Bungalows, Naranpura, Ahmedabad', 'Rajesh Patel', 'O+', 28, 'rajesh@yahoo.com'),
+(1028, '8749201653', '76, Ganesh Society, Memnagar, Ahmedabad', 'Jigna Mehta', 'AB-', 32, 'jigna@gmail.com'),
+(1029, '9856210934', '45, Nirman Flats, Prahladnagar Road, Ahmedabad', 'Rohit Shah', 'A-', 41, 'rohit@hotmail.com'),
+(1030, '9832109476', '90, Shubh Residency, Bodakdev, Ahmedabad', 'Deepika Jain', 'B+', 27, 'deepika@yahoo.com'),
+(1031, '8632049781', '78, Rajendra Park, Vastrapur, Ahmedabad', 'Kishor Soni', 'O-', 36, 'kishor@gmail.com'),
+(1032, '7169083452', '98, Shraddha Enclave, Ashram Road, Ahmedabad', 'Neha Patel', 'AB+', 25, 'neha@hotmail.com'),
+(1033, '9148563207', '56, Neelkanth Residency, Ghatlodia, Ahmedabad', 'Jatin Mehta', 'A+', 34, 'jatin@yahoo.com'),
+(1034, '9476021389', '67, Royal Heights, Science City Road, Sola, Ahmedabad', 'Meera Desai', 'B+', 47, 'meera@gmail.com'),
+(1035, '8357291648', '23, Parul Park, Chandkheda, Ahmedabad', 'Rakesh Shah', 'O+', 39, 'rakesh@hotmail.com'),
+(1036, '9672410853', '45, Shreeji Enclave, Vejalpur, Ahmedabad', 'Poonam Jain', 'A-', 31, 'poonam@yahoo.com'),
+(1037, '8052169473', '76, Laxmi Avenue, Jodhpur Cross Road, Satellite, Ahmedabad', 'Sanjay Desai', 'B+', 42, 'sanjay@gmail.com'),
+(1038, '7823610945', '90, Shanti Niketan, Thaltej Road, Thaltej, Ahmedabad', 'Kavita Shah', 'O-', 29, 'kavita@hotmail.com'),
+(1039, '6174890231', '23, Aarav Apartments, S.G. Highway, Bodakdev, Ahmedabad', 'Rohit Mehta', 'AB+', 38, 'rohit@yahoo.com'),
+(1040, '9728361945', '78, Shilpa Residency, Navrangpura, Ahmedabad', 'Sweta Desai', 'A+', 35, 'sweta@gmail.com'),
+(1041, '9038471625', '45, Rudraksha Avenue, Ambli Road, Ahmedabad', 'Sandeep Jain', 'B-', 44, 'sandeep@hotmail.com'),
+(1042, '8190546237', '32, Rajvi Complex, Chandlodia Road, Ahmedabad', 'Puja Soni', 'O+', 26, 'puja@yahoo.com'),
+(1043, '7018965432', '89, Shubham Society, Naroda Road, Nava Naroda, Ahmedabad', 'Vijay Patel', 'B+', 50, 'vijay@gmail.com'),
+(1044, '9578231064', '47, Rajvi Towers, Maninagar, Ahmedabad', 'Reema Shah', 'A-', 37, 'reema@hotmail.com'),
+(1045, '9784210563', '67, Swagat Residency, Satellite Road, Satellite, Ahmedabad', 'Deepak Soni', 'O-', 41, 'deepak@yahoo.com'),
+(1046, '8459136270', '12, Saraswati Park, Usmanpura, Ahmedabad', 'Sheetal Desai', 'AB-', 30, 'sheetal@gmail.com'),
+(1047, '9274610538', '34, Shreeji Society, Vatva Road, Vatva, Ahmedabad', 'Kunal Patel', 'B-', 45, 'kunal@hotmail.com'),
+(1048, '7831245609', '90, Vishal Residency, Nehrunagar, Ahmedabad', 'Preeti Jain', 'A+', 28, 'preeti@yahoo.com'),
+(1049, '9731604892', '23, Shreya Enclave, Chandlodia Road, Chandlodia, Ahmedabad', 'Amit Shah', 'O+', 42, 'amit@gmail.com');
+
+
+--For Medical History Table Part 1
+INSERT INTO "MedicalHistory" ("MedConditions", "Allergies", "PID")
+VALUES
+    ('High cholesterol', 'Dairy, Pollen', 1000),
+    ('Pre-diabetes', 'Seafood, Peanuts', 1001),
+    ('Seasonal allergies', 'Pollen, Dust', 1002),
+    ('Hypertension', 'Shellfish, Wheat', 1003),
+    ('Migraines', 'Eggs, Soy', 1004),
+    ('Mild arthritis', 'Nuts, Dairy', 1005),
+    ('Mild asthma', 'Pollen, Fish', 1006),
+    ('Benign tumor', 'Milk, Corn', 1007),
+    ('Mild depression', 'Wheat, Soy', 1008),
+    ('Generalized anxiety', 'Soy, Dairy', 1009),
+    ('Seasonal allergies', 'Pollen, Dust', 1010),
+    ('Mild asthma', 'Citrus fruits, Dairy', 1011),
+    ('High blood pressure', 'Chocolate, Wheat', 1012),
+    ('Borderline diabetes', 'Gluten, Nuts', 1013),
+    ('Mild heart palpitations', 'Sesame, Shellfish', 1014),
+    ('Occasional headaches', 'Red meat, Dairy', 1015),
+    ('Joint pain', 'Tree nuts, Wheat', 1016),
+    ('Mild skin irritation', 'Tomatoes, Soy', 1017),
+    ('Low mood', 'Oranges, Dairy', 1018),
+    ('Stress-related symptoms', 'Apples, Wheat', 1019),
+    ('High cholesterol, Vitamin D deficiency', 'Pollen, Dairy', 1020),
+    ('Eye strain, Vitamin A deficiency', 'Pollen, Dairy', 1021),
+    ('Vitamin C deficiency', 'Dust, Dairy', 1022),
+    ('Mild blood pressure issues', 'Pollen, Dairy', 1023),
+    ('Mild vitamin B12 deficiency', 'Pollen, Dairy', 1024);
+
+--For Medical History Table Part 2
+INSERT INTO "MedicalHistory" ("MedConditions", "Allergies", "PID")
+VALUES
+('Seasonal allergies', 'Pollen, Dust', 1025),
+('NONE', 'NONE', 1026),
+('Benign tumor', 'Milk, Corn', 1027),
+('NONE', 'NONE', 1028),
+('Generalized anxiety', 'Soy, Dairy', 1029),
+('Seasonal allergies', 'Pollen, Dust', 1030),
+('Mild asthma', 'Citrus fruits, Dairy', 1031),
+('High blood pressure', 'Chocolate, Wheat', 1032),
+('Borderline diabetes', 'Gluten, Nuts', 1033),
+('NONE', 'NONE', 1034),
+('Occasional headaches', 'Red meat, Dairy', 1035),
+('Joint pain', 'Tree nuts, Wheat', 1036),
+('Mild skin irritation', 'Tomatoes, Soy', 1037),
+('Low mood', 'Oranges, Dairy', 1038),
+('Stress-related symptoms', 'Apples, Wheat', 1039),
+('High cholesterol, Vitamin D deficiency', 'Pollen, Dairy', 1040),
+('Eye strain, Vitamin A deficiency', 'Pollen, Dairy', 1041),
+('NONE', 'NONE', 1042),
+('Mild blood pressure issues', 'Pollen, Dairy', 1043),
+('Mild vitamin B12 deficiency', 'Pollen, Dairy', 1044),
+('Seasonal allergies', 'Pollen, Dust', 1045),
+('Mild asthma', 'Pollen, Fish', 1046),
+('Benign tumor', 'Milk, Corn', 1047),
+('Mild depression', 'Wheat, Soy', 1048),
+('Generalized anxiety', 'Soy, Dairy', 1049);
+
+
+
+--For Staff Table:
+INSERT INTO "Staff" ("StaffID","Name", "Salary", "Address", "Type", "PhoneNumber", "LastPaymentDate") VALUES
+(1,'Harbhajan Thanjrajan', '0.0', '123 Swastik Society, Ahmedabad', 'Clinic Staff', '9876543210', '2024-04-01'), --DOCTOR only gets the profits
+
+(100,'Priya Shah', 12500, '456 Navrangpura, Ahmedabad', 'Pharmacy Staff', '9876543211', '2024-04-01'), --Pharmacy: Morning
+(101,'Ananya Shah', 14000, '654 Vastrapur, Ahmedabad', 'Pharmacy Staff', '9876543214', '2024-04-01'), --Pharmacy Night
+
+(200,'Aarav Joshi', 2300, '789 Gurukul, Ahmedabad', 'Cleaning Staff', '9876543212', '2024-04-01'), --Cleaner 1
+(201,'Sunil Kumar', 2000, '111 Shyamal Cross Road, Ahmedabad', 'Cleaning Staff', '9876543215', '2024-04-01'), --Cleaner 2
+
+(300,'Nisha Desai', 16700, '321 Satellite Road, Ahmedabad', 'Clinic Staff', '9876543213', '2024-04-01'), --Receptionist
+(301,'Kiran Sharma', 25000, '789 Satellite Road, Ahmedabad', 'Clinic Staff', '9876543217', '2024-04-01'); --Nurse
+
+
+--For Clinic Staff Table:
+INSERT INTO "ClinicStaff" ("StaffID", "Role")
+SELECT "StaffID", 
+    CASE 
+        WHEN "Name" = 'Harbhajan Thanjrajan' THEN 'Doctor'
+        WHEN "Name" = 'Nisha Desai' THEN 'Receptionist'
+        WHEN "Name" = 'Kiran Sharma' THEN 'Nurse'
+        ELSE NULL
+    END
+FROM "Staff"
+WHERE "Type" = 'Clinic Staff';
+
+
+--For Pharmacy Staff Table:
+INSERT INTO "PharmacyStaff" ("StaffID", "Shift")
+SELECT "StaffID", 
+    CASE 
+        WHEN "Name" = 'Priya Shah' THEN 'Morning'
+        ELSE 'Evening'
+    END
+FROM "Staff"
+WHERE "Type" = 'Pharmacy Staff';
+
+
+--For Cleaning Staff Table:
+INSERT INTO "CleaningStaff" ("StaffID")
+SELECT "StaffID"
+FROM "Staff"
+WHERE "Type" = 'Cleaning Staff';
+
+
+
+--For Appointment Table:
+INSERT INTO "Appointment" ("Time", "Date", "PID", "StaffID")
+VALUES
+    ('11:00:00', '2024-02-01', 1000, 300),
+    ('11:30:00', '2024-02-01', 1004, 300),
+    ('12:30:00', '2024-02-01', 1005, 300),
+    ('13:00:00', '2024-02-01', 1001, 300),
+    ('16:30:00', '2024-02-01', 1006, 300),
+    ('17:00:00', '2024-02-01', 1002, 300),
+    ('19:00:00', '2024-02-01', 1007, 300),
+    ('20:00:00', '2024-02-01', 1003, 300),
+    ('12:00:00', '2024-02-02', 1008, 300),
+    ('13:00:00', '2024-02-02', 1012, 300),
+    ('13:15:00', '2024-02-02', 1013, 300),
+    ('13:30:00', '2024-02-02', 1009, 300),
+    ('17:00:00', '2024-02-02', 1014, 300),
+    ('17:30:00', '2024-02-02', 1010, 300),
+    ('19:45:00', '2024-02-02', 1015, 300),
+    ('20:00:00', '2024-02-02', 1011, 300),
+    ('11:00:00', '2024-02-03', 1020, 300),
+    ('11:30:00', '2024-02-03', 1016, 300),
+    ('12:30:00', '2024-02-03', 1021, 300),
+    ('16:30:00', '2024-02-03', 1022, 300),
+    ('19:30:00', '2024-02-03', 1019, 300),
+    ('20:00:00', '2024-02-03', 1023, 300),
+    ('11:00:00', '2024-02-04', 1024, 300),
+    ('11:30:00', '2024-02-04', 1028, 300),
+    ('12:30:00', '2024-02-04', 1029, 300),
+    ('13:00:00', '2024-02-04', 1025, 300),
+    ('16:30:00', '2024-02-04', 1030, 300),
+    ('17:00:00', '2024-02-04', 1026, 300),
+    ('19:00:00', '2024-02-04', 1031, 300),
+    ('20:00:00', '2024-02-04', 1027, 300),
+    ('12:00:00', '2024-02-05', 1032, 300),
+    ('13:00:00', '2024-02-05', 1036, 300),
+    ('13:15:00', '2024-02-05', 1037, 300),
+    ('13:30:00', '2024-02-05', 1033, 300),
+    ('13:45:00', '2024-02-05', 1012, 300),
+    ('17:00:00', '2024-02-05', 1038, 300),
+    ('17:30:00', '2024-02-05', 1034, 300),
+    ('19:45:00', '2024-02-05', 1039, 300),
+    ('20:00:00', '2024-02-05', 1035, 300),
+    ('11:00:00', '2024-02-06', 1044, 300),
+    ('11:30:00', '2024-02-06', 1040, 300),
+    ('12:30:00', '2024-02-06', 1045, 300),
+    ('12:30:00', '2024-02-06', 1041, 300),
+    ('13:00:00', '2024-02-06', 1007, 300),
+    ('16:30:00', '2024-02-06', 1046, 300),
+    ('16:30:00', '2024-02-06', 1042, 300),
+    ('19:30:00', '2024-02-06', 1043, 300),
+    ('20:00:00', '2024-02-06', 1047, 300),
+    ('12:30:00', '2024-02-07', 1021, 300),
+    ('16:30:00', '2024-02-07', 1022, 300),
+    ('16:45:00', '2024-02-07', 1006, 300),
+    ('17:00:00', '2024-02-07', 1002, 300),
+    ('17:30:00', '2024-02-07', 1048, 300),
+    ('20:00:00', '2024-02-07', 1049, 300);
+
+--For Report Table:
+INSERT INTO "Report" ("RepID", "DateOfVisit", "Diagnosis", "Symptoms", "PID", "ConsultancyCharges")
+VALUES
+(10001, '2024-02-01', 'Acute bronchitis', 'Persistent cough, wheezing, chest discomfort', 1000, 500.00),
+(10002, '2024-02-01', 'Seasonal allergies', 'Runny nose, sneezing, itchy eyes', 1004, 500.50),
+(10003, '2024-02-01', 'Gastroenteritis', 'Abdominal pain, nausea, vomiting, diarrhea', 1005, 500.75),
+(10004, '2024-02-01', 'Migraine', 'Severe headache, sensitivity to light and sound', 1001, 500.25),
+(10005, '2024-02-01', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1006, 500.00),
+(10006, '2024-02-01', 'Tension headache', 'Dull, non-pulsating headache, muscle tension', 1002, 500.00),
+(10007, '2024-02-01', 'Generalised anxiety disorder', 'Excessive worry, restlessness, insomnia', 1007, 550.00),
+(10008, '2024-02-01', 'Insomnia', 'Difficulty falling and staying asleep', 1003, 520.00),
+(10009, '2024-02-02', 'Hypertension', 'High blood pressure, headache, dizziness', 1008, 505.75),
+(10010, '2024-02-02', 'Type 2 diabetes', 'Increased thirst, frequent urination, fatigue', 1012, 535.00),
+(10011, '2024-02-02', 'Asthma', 'Wheezing, shortness of breath, chest tightness', 1013, 510.25),
+(10012, '2024-02-02', 'Acute sinusitis', 'Nasal congestion, facial pain, fever', 1009, 500.50),
+(10013, '2024-02-02', 'Acid reflux', 'Heartburn, regurgitation, chest pain', 1014, 515.00),
+(10014, '2024-02-02', 'Osteoarthritis', 'Joint pain, stiffness, swelling', 1010, 525.75),
+(10015, '2024-02-02', 'Ear infection', 'Ear pain, fever, temporary hearing loss', 1015, 500.00),
+(10016, '2024-02-02', 'Viral conjunctivitis', 'Eye redness, itching, discharge', 1011, 500.50),
+(10017, '2024-02-03', 'Influenza', 'Fever, cough, body aches', 1020, 500.00),
+(10018, '2024-02-03', 'Bronchitis', 'Persistent cough, wheezing, chest discomfort', 1016, 520.50),
+(10019, '2024-02-03', 'Allergic rhinitis', 'Runny nose, sneezing, itchy eyes', 1021, 500.75),
+(10020, '2024-02-03', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1022, 510.00),
+(10021, '2024-02-03', 'Anxiety disorder', 'Excessive worry, restlessness, insomnia', 1019, 550.00),
+(10022, '2024-02-03', 'Insomnia', 'Difficulty falling and staying asleep', 1023, 520.00),
+(10023, '2024-02-04', 'Influenza', 'Fever, cough, body aches', 1024, 500.00),
+(10024, '2024-02-04', 'Bronchitis', 'Persistent cough, wheezing, chest discomfort', 1028, 520.50),
+(10025, '2024-02-04', 'Allergic rhinitis', 'Runny nose, sneezing, itchy eyes', 1029, 500.75),
+(10026, '2024-02-04', 'Gastritis', 'Abdominal pain, nausea, heartburn', 1025, 500.25),
+(10027, '2024-02-04', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1030, 510.00),
+(10028, '2024-02-04', 'Migraine', 'Severe headache, sensitivity to light and sound', 1026, 500.00),
+(10029, '2024-02-04', 'Anxiety disorder', 'Excessive worry, restlessness, insomnia', 1031, 550.00),
+(10030, '2024-02-04', 'Insomnia', 'Difficulty falling and staying asleep', 1027, 520.00),
+(10031, '2024-02-05', 'Hypertension', 'High blood pressure, headache, dizziness', 1032, 505.75),
+(10032, '2024-02-05', 'Type 2 diabetes', 'Increased thirst, frequent urination, fatigue', 1036, 535.00),
+(10033, '2024-02-05', 'Asthma', 'Wheezing, shortness of breath, chest tightness', 1037, 510.25),
+(10034, '2024-02-05', 'Acute sinusitis', 'Nasal congestion, facial pain, fever', 1033, 500.50),
+(10035, '2024-02-05', 'Type 2 diabetes', 'Increased thirst, frequent urination, fatigue', 1012, 515.00),
+(10036, '2024-02-05', 'Osteoarthritis', 'Joint pain, stiffness, swelling', 1038, 525.75),
+(10037, '2024-02-05', 'Ear infection', 'Ear pain, fever, temporary hearing loss', 1034, 500.00),
+(10038, '2024-02-05', 'Viral conjunctivitis', 'Eye redness, itching, discharge', 1039, 500.50),
+(10039, '2024-02-05', 'Influenza', 'Fever, cough, body aches', 1035, 500.00),
+(10040, '2024-02-06', 'Influenza', 'Fever, cough, body aches', 1044, 520.50),
+(10041, '2024-02-06', 'Allergic rhinitis', 'Runny nose, sneezing, itchy eyes', 1040, 500.75),
+(10042, '2024-02-06', 'Gastritis', 'Abdominal pain, nausea, heartburn', 1045, 500.25),
+(10043, '2024-02-06', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1041, 510.00),
+(10044, '2024-02-06', 'Anxiety disorder', 'Excessive worry, restlessness, insomnia', 1007, 550.00),
+(10045, '2024-02-06', 'Insomnia', 'Difficulty falling and staying asleep', 1046, 520.00),
+(10046, '2024-02-06', 'Hypertension', 'High blood pressure, headache, dizziness', 1042, 505.75),
+(10047, '2024-02-06', 'Type 2 diabetes', 'Increased thirst, frequent urination, fatigue', 1043, 535.00),
+(10048, '2024-02-06', 'Asthma', 'Wheezing, shortness of breath, chest tightness', 1047, 510.25),
+(10049, '2024-02-07', 'Allergic rhinitis', 'Runny nose, sneezing, itchy eyes', 1021, 500.50),
+(10050, '2024-02-07', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1022, 515.00),
+(10051, '2024-02-07', 'Urinary tract infection', 'Burning sensation during urination, pelvic pain', 1006, 525.75),
+(10052, '2024-02-07', 'Migraine', 'Severe headache, sensitivity to light and sound', 1002, 500.00),
+(10053, '2024-02-07', 'Osteoarthritis', 'Joint pain, stiffness, swelling', 1048, 500.50),
+(10054, '2024-02-07', 'Influenza', 'Fever, cough, body aches', 1049, 500.00);
+
+
+--For Prescription Table:
+INSERT INTO "Prescription" ("PresID", "MedName", "MorningDosage", "AfternoonDosage", "EveningDosage", "Quantity", "Instructions", "RepID")
+VALUES
+
+(2001, 'Paracetamol', 1, 1, 1, 30, 'Take 1 tablet three times a day with meals', 10001);
+
+INSERT INTO "Prescription" ("MedName", "MorningDosage", "AfternoonDosage", "EveningDosage", "Quantity", "Instructions", "RepID")
+VALUES
+('Ibuprofen', 1, 1, 1, 30, 'Take 1 tablet three times a day after meals', 10001),
+('Cough syrup', 1, 0, 1, 30, 'Take 5ml three times a day as needed for cough', 10001)  , 
+('Cetirizine', 1, 0, 1, 30, 'Take 1 tablet in the morning and evening as needed', 10002),
+('Nasal spray', 1, 1, 0, 1, 'Use 2 sprays in each nostril morning and afternoon', 10002)  , 
+('Loperamide', 1, 1, 0, 30, 'Take 1 tablet after each loose stool, not exceeding 8 per day', 10003),
+('Oral rehydration solution', 1, 0, 1, 10, 'Take as needed to stay hydrated', 10003)  , 
+('Sumatriptan', 1, 0, 1, 30, 'Take 1 tablet at onset of migraine  ,  repeat once if needed', 10004)  , 
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10005)  , 
+('Acetaminophen', 1, 1, 1, 30, 'Take 1 tablet every 4-6 hours as needed', 10006),
+('Muscle relaxant', 1, 0, 1, 20, 'Take as needed for muscle tension', 10006)  , 
+('Sertraline', 1, 0, 0, 30, 'Take 1 tablet in the morning', 10007),
+('Lorazepam', 0, 1, 0, 10, 'Take 1 tablet in the afternoon as needed', 10007)  , 
+('Melatonin', 0, 0, 1, 30, 'Take 1 tablet 30 minutes before bedtime', 10008)  , 
+('Lisinopril', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10009)  , 
+('Metformin', 1, 1, 0, 60, 'Take 1 tablet twice daily with meals', 10010),
+('Glimepiride', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10010)  , 
+('Albuterol', 1, 1, 1, 30, 'Take 1 puff as needed for wheezing or shortness of breath', 10011),
+('Inhaled corticosteroids', 1, 0, 1, 30, 'Use 2 puffs twice daily for maintenance', 10011)  , 
+('Amoxicillin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10012),
+('Nasal decongestant spray', 1, 1, 1, 14, 'Use as needed for congestion', 10012)  , 
+('Omeprazole', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10013),
+('Antacid', 1, 1, 1, 30, 'Take as needed for heartburn', 10013)  , 
+('Ibuprofen', 1, 1, 1, 30, 'Take 1 tablet three times a day with meals', 10014),
+('Topical cream', 0, 0, 1, 15, 'Apply to affected joints as needed', 10014)  , 
+('Amoxicillin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10015),
+('Ear drops', 0, 0, 1, 10, 'Use as needed for ear pain', 10015)  , 
+('Antihistamine', 1, 0, 1, 30, 'Take 1 tablet twice daily for itching', 10016),
+('Artificial tears', 0, 0, 1, 10, 'Use as needed for eye discomfort', 10016)  , 
+('Oseltamivir', 1, 1, 0, 10, 'Take 1 capsule twice daily for 5 days', 10017),
+('Acetaminophen', 1, 0, 1, 30, 'Take as needed for fever or pain', 10017)  , 
+('Dextromethorphan', 1, 0, 1, 30, 'Take as needed for cough', 10018),
+('Guaifenesin', 1, 0, 1, 30, 'Take as needed for chest discomfort', 10018)  , 
+('Cetirizine', 1, 0, 1, 30, 'Take 1 tablet twice daily for symptoms', 10019),
+('Nasal spray', 1, 1, 0, 1, 'Use 2 sprays in each nostril in the morning and afternoon', 10019)  , 
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10020),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10020)  , 
+('Sertraline', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10021),
+('Lorazepam', 0, 1, 0, 10, 'Take as needed for anxiety', 10021)  , 
+('Melatonin', 0, 0, 1, 30, 'Take 1 tablet 30 minutes before bedtime', 10022)  , 
+('Oseltamivir', 1, 1, 0, 10, 'Take 1 capsule twice daily for 5 days', 10023),
+('Acetaminophen', 1, 0, 1, 30, 'Take as needed for fever or pain', 10023)  , 
+('Dextromethorphan', 1, 0, 1, 30, 'Take as needed for cough', 10024),
+('Guaifenesin', 1, 0, 1, 30, 'Take as needed for chest discomfort', 10024)  , 
+('Cetirizine', 1, 0, 1, 30, 'Take 1 tablet twice daily for symptoms', 10025),
+('Nasal spray', 1, 1, 0, 1, 'Use 2 sprays in each nostril in the morning and afternoon', 10025)  , 
+('Proton pump inhibitor', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10026),
+('Antacid', 1, 1, 1, 30, 'Take as needed for heartburn', 10026)  , 
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10027),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10027)  , 
+('Sumatriptan', 1, 0, 1, 30, 'Take 1 tablet at onset of migraine  ,  repeat once if needed', 10028)  , 
+('Sertraline', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10029),
+('Lorazepam', 0, 1, 0, 10, 'Take as needed for anxiety', 10029)  , 
+('Melatonin', 0, 0, 1, 30, 'Take 1 tablet 30 minutes before bedtime', 10030)  , 
+('Lisinopril', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10031),
+('Amlodipine', 1, 0, 0, 30, 'Take 1 tablet daily', 10031)  , 
+('Metformin', 1, 1, 0, 60, 'Take 1 tablet twice daily with meals', 10032),
+('Glimepiride', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10032)  , 
+('Albuterol', 1, 1, 1, 30, 'Take 1 puff as needed for wheezing or shortness of breath', 10033),
+('Inhaled corticosteroids', 1, 0, 1, 30, 'Use 2 puffs twice daily for maintenance', 10033)  , 
+('Amoxicillin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10034),
+('Nasal decongestant spray', 1, 1, 0, 14, 'Use as needed for congestion', 10034)  , 
+('Metformin', 1, 1, 0, 60, 'Take 1 tablet twice daily with meals', 10035),
+('Glimepiride', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10035)  , 
+('Acetaminophen', 1, 1, 1, 30, 'Take 1 tablet three times a day with meals for pain relief', 10036),
+('Naproxen', 1, 1, 0, 20, 'Take 1 tablet twice a day for pain and inflammation', 10036)  , 
+('Amoxicillin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10037),
+('Ibuprofen', 1, 1, 1, 30, 'Take 1 tablet three times a day for pain and inflammation', 10037)  , 
+('Antihistamine eye drops', 1, 0, 1, 30, 'Use 1 drop in each eye twice daily', 10038),
+('Cold compress', 0, 0, 1, 1, 'Apply to eyes for comfort', 10038)  , 
+('Oseltamivir', 1, 1, 0, 10, 'Take 1 capsule twice daily for 5 days', 10039),
+('Acetaminophen', 1, 0, 1, 30, 'Take as needed for fever or pain', 10039)  , 
+('Oseltamivir', 1, 1, 0, 10, 'Take 1 capsule twice daily for 5 days', 10040),
+('Acetaminophen', 1, 0, 1, 30, 'Take as needed for fever or pain', 10040)  , 
+('Cetirizine', 1, 0, 1, 30, 'Take 1 tablet twice daily for symptoms', 10041),
+('Nasal spray', 1, 1, 0, 1, 'Use 2 sprays in each nostril in the morning and afternoon', 10041)  , 
+('Proton pump inhibitor', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10042),
+('Antacid', 1, 1, 1, 30, 'Take as needed for heartburn', 10042)  , 
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10043),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10043)  , 
+('Sertraline', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10044),
+('Lorazepam', 0, 1, 0, 10, 'Take as needed for anxiety', 10044)  , 
+('Melatonin', 0, 0, 1, 30, 'Take 1 tablet 30 minutes before bedtime', 10045)  , 
+('Lisinopril', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10046),
+('Amlodipine', 1, 0, 0, 30, 'Take 1 tablet daily', 10046)  , 
+('Metformin', 1, 1, 0, 60, 'Take 1 tablet twice daily with meals', 10047),
+('Glimepiride', 1, 0, 0, 30, 'Take 1 tablet daily in the morning', 10047)  , 
+('Albuterol', 1, 1, 1, 30, 'Take 1 puff as needed for wheezing or shortness of breath', 10048),
+('Inhaled corticosteroids', 1, 0, 1, 30, 'Use 2 puffs twice daily for maintenance', 10048)  , 
+('Cetirizine', 1, 0, 1, 30, 'Take 1 tablet twice daily for symptoms', 10049),
+('Nasal spray', 1, 1, 0, 1, 'Use 2 sprays in each nostril in the morning and afternoon', 10049)  , 
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10050),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10050),
+('Nitrofurantoin', 1, 1, 0, 14, 'Take 1 capsule twice daily for 7 days', 10051),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10052),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10053),
+('Phenazopyridine', 1, 0, 1, 10, 'Take 1 tablet three times a day for pain relief', 10054);
+
+--For inventory table
+INSERT INTO "Inventory" ("MedID", "MedName", "BatchNumber", "QtyAvailable", "QtyOrdered", "CostPrice", "SellPrice", "MgfDate", "ExpDate", "StaffID")
+VALUES
+    (2000, 'Cold compress', '20240105', 100, 120, 10.0, 15.0, '2023-10-15', '2024-10-15', 100),
+    (2001, 'Cough syrup', '20240219', 150, 200, 8.0, 12.0, '2023-11-10', '2024-11-10', 100),
+    (2002, 'Lisinopril', '20240315', 200, 250, 5.0, 8.0, '2023-09-30', '2025-09-30', 101),
+    (2003, 'Topical cream', '20240328', 75, 100, 12.0, 16.0, '2023-10-22', '2024-10-22', 101),
+    (2004, 'Ear drops', '20240208', 300, 350, 3.0, 4.5, '2023-12-05', '2025-12-05', 100),
+    (2005, 'Naproxen', '20240304', 50, 75, 15.0, 20.0, '2023-08-25', '2024-08-25', 100),
+    (2006, 'Nitrofurantoin', '20240127', 80, 100, 20.0, 30.0, '2023-09-15', '2024-09-15', 101),
+    (2007, 'Metformin', '20240110', 200, 250, 8.0, 12.0, '2023-10-05', '2024-10-05', 100),
+    (2008, 'Inhaled corticosteroids', '20240131', 100, 120, 5.0, 7.5, '2023-11-20', '2025-11-20', 100),
+    (2009, 'Nasal spray', '20240115', 120, 150, 7.0, 10.5, '2023-09-05', '2024-09-05', 100),
+    (2010, 'Phenazopyridine', '20240220', 75, 100, 6.0, 8.5, '2023-12-12', '2025-12-12', 101),
+    (2011, 'Albuterol', '20240205', 180, 200, 7.0, 10.0, '2023-10-01', '2024-10-01', 100),
+    (2012, 'Muscle relaxant', '20240213', 90, 120, 9.0, 13.5, '2023-11-05', '2025-11-05', 101),
+    (2013, 'Nasal decongestant spray', '20240302', 75, 100, 11.0, 16.5, '2023-10-10', '2024-10-10', 100),
+    (2014, 'Sertraline', '20240318', 60, 80, 15.0, 22.5, '2023-08-20', '2024-08-20', 101),
+    (2015, 'Melatonin', '20240217', 300, 350, 4.0, 5.5, '2023-07-25', '2024-07-25', 100),
+    (2016, 'Artificial tears', '20240120', 200, 250, 5.0, 7.5, '2023-11-15', '2025-11-15', 101),
+    (2017, 'Ibuprofen', '20240221', 100, 120, 6.0, 9.0, '2023-09-30', '2024-09-30', 101),
+    (2018, 'Sumatriptan', '20240214', 75, 100, 12.0, 18.0, '2023-12-25', '2025-12-25', 100),
+    (2019, 'Antihistamine', '20240106', 150, 200, 8.0, 11.5, '2023-11-10', '2024-11-10', 100),
+    (2020, 'Oral rehydration solution', '20240205', 200, 250, 5.0, 7.5, '2023-09-30', '2025-09-30', 101),
+    (2021, 'Antacid', '20240201', 75, 100, 12.0, 18.0, '2023-10-22', '2024-10-22', 101),
+    (2022, 'Oseltamivir', '20240118', 300, 350, 3.0, 4.5, '2023-12-05', '2025-12-05', 100),
+    (2023, 'Omeprazole', '20240128', 80, 100, 20.0, 28.0, '2023-09-15', '2024-09-15', 101),
+    (2024, 'Amlodipine', '20240119', 200, 250, 8.0, 12.0, '2023-10-05', '2024-10-05', 100),
+    (2025, 'Antihistamine eye drops', '20240109', 120, 150, 7.0, 10.5, '2023-09-05', '2024-09-05', 100),
+    (2026, 'Dextromethorphan', '20240114', 75, 100, 11.0, 15.5, '2023-10-10', '2024-10-10', 100),
+    (2027, 'Lorazepam', '20240319', 60, 80, 15.0, 22.0, '2023-08-20', '2024-08-20', 101),
+    (2028, 'Amoxicillin', '20240223', 300, 350, 4.0, 5.5, '2023-07-25', '2024-07-25', 100),
+    (2029, 'Proton pump inhibitor', '20240112', 200, 250, 5.0, 7.0, '2023-11-15', '2025-11-15', 101),
+    (2030, 'Loperamide', '20240315', 75, 100, 11.0, 16.5, '2023-10-10', '2024-10-10', 100),
+    (2031, 'Guaifenesin', '20240218', 300, 350, 4.0, 5.5, '2023-07-25', '2024-07-25', 100),
+    (2032, 'Acetaminophen', '20240110', 75, 100, 12.0, 18.0, '2023-12-25', '2025-12-25', 100),
+    (2033, 'Cetirizine', '20240109', 120, 150, 7.0, 10.5, '2023-09-05', '2024-09-05', 100),
+    (2034, 'Paracetamol', '20240115', 200, 250, 5.0, 7.5, '2023-09-30', '2025-09-30', 101),
+    (2035, 'Glimepiride', '20240118', 300, 350, 4.0, 5.5, '2023-07-25', '2024-07-25', 100);

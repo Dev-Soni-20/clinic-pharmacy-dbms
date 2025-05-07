@@ -1,0 +1,130 @@
+--Script for creating schema of our clinic and pharmacy management system
+
+create schema clinic_and_pharmacy;
+set search_path to clinic_and_pharmacy;
+
+CREATE TABLE "Patient"(
+	"PID" SERIAL PRIMARY KEY NOT NULL,
+    "PhoneNumber" VARCHAR(10) CONSTRAINT check_phone_length CHECK (LENGTH("PhoneNumber")=10),
+    "Address" TEXT NOT NULL,
+    "Name" VARCHAR(30) NOT NULL,
+    "BloodGroup" VARCHAR(5) NOT NULL,
+    "Age" SMALLINT NOT NULL,
+    "Email" VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE "MedicalHistory"(
+    "MhID" SERIAL PRIMARY KEY NOT NULL,
+    "MedConditions" TEXT NOT NULL,
+    "Allergies" TEXT NOT NULL,
+    "PID" SERIAL NOT NULL,
+    FOREIGN KEY ("PID") REFERENCES "Patient"("PID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "Staff"(
+    "StaffID" SERIAL PRIMARY KEY NOT NULL,
+    "Name" VARCHAR(30) NOT NULL,
+    "Salary" REAL NOT NULL,
+    "Address" TEXT NOT NULL,
+    "Type" VARCHAR(20) NOT NULL,
+    "PhoneNumber" VARCHAR(10) CONSTRAINT check_phone_length CHECK (LENGTH("PhoneNumber")=10),
+    "LastPaymentDate" DATE NOT NULL
+);
+
+CREATE TABLE "ClinicStaff"(
+    "StaffID" SERIAL PRIMARY KEY NOT NULL,
+    "Role" VARCHAR(20) NOT NULL,
+    FOREIGN KEY ("StaffID") REFERENCES "Staff"("StaffID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "CleaningStaff"(
+    "StaffID" SERIAL PRIMARY KEY NOT NULL,
+    FOREIGN KEY ("StaffID") REFERENCES "Staff"("StaffID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "PharmacyStaff"(
+    "StaffID" SERIAL PRIMARY KEY NOT NULL,
+    "Shift" VARCHAR(10) NOT NULL,
+    FOREIGN KEY ("StaffID") REFERENCES "Staff"("StaffID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "Appointment"(
+    "AppID" SERIAL PRIMARY KEY NOT NULL,
+    "Time" TIME NOT NULL,
+    "Date" DATE NOT NULL,
+    "Status" VARCHAR(20) NOT NULL,
+    "PID" SERIAL NOT NULL,
+    "StaffID" SERIAL NOT NULL,
+    FOREIGN KEY ("PID") REFERENCES "Patient"("PID")
+    ON UPDATE CASCADE ON DELETE SET NULL,
+    FOREIGN KEY ("StaffID") REFERENCES "ClinicStaff"("StaffID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+--1.Adding the constraints that appointments should only be in a given time slot
+ALTER TABLE "Appointment"
+ADD CONSTRAINT check_time_range CHECK (("Time" BETWEEN '11:00' AND '14:00') OR ("Time" BETWEEN '16:00' AND '21:00'));
+
+
+--2.Adding the constraint that whenever the new entry is being made, the default value of the status is "PENDING"
+ALTER TABLE "Appointment"
+ALTER COLUMN "Status" SET DEFAULT 'PENDING';
+
+
+
+CREATE TABLE "Report"(
+    "RepID" SERIAL PRIMARY KEY NOT NULL,
+    "DateOfVisit" DATE NOT NULL,
+    "Diagnosis" TEXT NOT NULL,
+    "Symptoms" TEXT NOT NULL,
+    "PID" SERIAL NOT NULL,
+    "ConsultancyCharges" REAL NOT NULL,
+    FOREIGN KEY ("PID") REFERENCES "Patient"("PID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "Prescription"(
+    "PresID" SERIAL UNIQUE NOT NULL,
+    "MedName" VARCHAR(30) NOT NULL,
+    "MorningDosage" SMALLINT NOT NULL,
+    "AfternoonDosage" SMALLINT NOT NULL,
+    "EveningDosage" SMALLINT NOT NULL,
+    "Quantity" SMALLINT NOT NULL,
+    "Instructions" TEXT NOT NULL,
+    "RepID" SERIAL NOT NULL,
+    PRIMARY KEY ("PresID"),
+    FOREIGN KEY ("RepID") REFERENCES "Report"("RepID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "Inventory"(
+    "MedID" SERIAL UNIQUE NOT NULL,
+    "MedName" VARCHAR(25) NOT NULL,
+    "BatchNumber" VARCHAR(10) NOT NULL,
+    "QtyAvailable" INTEGER NOT NULL,
+    "QtyOrdered" INTEGER NOT NULL,
+    "CostPrice" REAL NOT NULL,
+    "SellPrice" REAL NOT NULL,
+    "MgfDate" DATE NOT NULL,
+    "ExpDate" DATE NOT NULL,
+    "StaffID" SERIAL NOT NULL,
+    PRIMARY KEY ("MedID", "BatchNumber"),
+    FOREIGN KEY ("StaffID") REFERENCES "PharmacyStaff"("StaffID") 
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE "Invoice"(
+    "InvNo" SERIAL PRIMARY KEY NOT NULL,
+    "InvDate" DATE NOT NULL,
+    "TotalAmount" REAL NOT NULL,
+    "RepID" SERIAL NOT NULL,
+    "StaffID" SERIAL NOT NULL,
+    FOREIGN KEY ("RepID") REFERENCES "Report"("RepID")
+    ON UPDATE CASCADE ON DELETE SET NULL,
+    FOREIGN KEY ("StaffID") REFERENCES "PharmacyStaff"("StaffID")
+    ON UPDATE CASCADE ON DELETE SET NULL
+);
